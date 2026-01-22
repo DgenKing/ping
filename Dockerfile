@@ -42,9 +42,8 @@ RUN chown nextjs:nodejs .next
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-# Create data directory for persistence
+# Create data directory for persistence (use Railway Volume for persistence)
 RUN mkdir -p /app/data && chown nextjs:nodejs /app/data
-VOLUME ["/app/data"]
 
 USER nextjs
 
