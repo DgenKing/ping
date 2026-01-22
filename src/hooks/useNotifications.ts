@@ -30,6 +30,12 @@ function urlBase64ToUint8Array(base64String: string): ArrayBuffer {
 function isLocalhostEnv(): boolean {
   if (typeof window === 'undefined') return false;
   const hostname = window.location.hostname;
+  const protocol = window.location.protocol;
+
+  // If we're on HTTPS, we're not localhost (deployed)
+  if (protocol === 'https:') return false;
+
+  // Only localhost/127.0.0.1/local IPs on HTTP are considered localhost
   return hostname === 'localhost' || hostname === '127.0.0.1' || hostname.startsWith('192.168.');
 }
 
