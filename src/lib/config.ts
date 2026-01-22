@@ -1,9 +1,9 @@
 // VAPID Keys for Web Push
 // These are loaded from environment variables
 
-export const VAPID_PUBLIC_KEY = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY || 'BFr3vMZoYZd7upTgyeaPE9XAZQYc-7786TBCimL3u267Is0dl5cOKaHtOQ5l6xE6ostNx5hFPo1wJRpD2CBg-m8';
+export const VAPID_PUBLIC_KEY = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY || 'BO3CR55Tm53CM07YTBq0m0LEcSXSNRdv5KvMINJnlqNVXkq5RO5TH1KTQr5Yayncps8CuXmCCmTDkog_-3QWaC0';
 
-export const VAPID_PRIVATE_KEY = process.env.VAPID_PRIVATE_KEY || 'bp-Ejcxqxg6xkHwRmUG5HGpEGSUjGWH1Xjs6Jwf3mPc';
+export const VAPID_PRIVATE_KEY = process.env.VAPID_PRIVATE_KEY || 'HZZKg75jan9G6358cZmAV0TBqK1ArU2v-II-GNGXTIE';
 
 export const VAPID_SUBJECT = process.env.VAPID_SUBJECT || 'mailto:ping@example.com';
 
