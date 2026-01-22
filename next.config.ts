@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Required for Docker/Railway deployment
+  output: 'standalone',
+
   // Required for service worker
   async headers() {
     return [
