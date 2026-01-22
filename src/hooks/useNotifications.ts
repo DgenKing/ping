@@ -149,7 +149,7 @@ export function useNotifications(): UseNotificationsResult {
       const message = e instanceof Error ? e.message : 'Failed to subscribe';
       // Provide helpful message for common errors
       if (message.includes('push service') || message.includes('AbortError')) {
-        setError('Push not available on localhost. Deploy to HTTPS to enable.');
+        setError('Push subscription failed. Check browser permissions or try again.');
       } else {
         setError(message);
       }
